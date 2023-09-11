@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Daniel Lee">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <header class="header">
+            <div class="header-navbar">
+                <nav id="navbar" class="header-nav">
+                    <ul class="navbar-row">
+                        <li class="navbar-list"><a href="#about">about</a></li>
+                        <li class="navbar-list"><a href="#skills">skills</a></li>
+                        <li class="navbar-list"><a href="#projects">projects</a></li>
+                        <li class="navbar-list"><a href="#contact">contact</a></li>
+                    </ul>
+            </nav>
+            </div>
+        </header>
+        <main>
+            <section class="basic-info" id="basic-info">
+                <div class="basic-info-wrapper">
+                    <h1>Daniel Daewon Lee</h1>
+                    <p>I like to code sometimes</p>
+                </div>
+                <div class="profile-pic"></div>
+            </section>
+            <section class="about-me" id="about">
+                <h2 class="about-heading">About</h2>
+                <div class= "about-wrapper">
+                    <div class="underline2"></div>
+                    <p class="about-info">Hi! My name is Daniel Daewon Lee, an undergraduate student at UCSD with a passion for learning/mastering new languages,frameworks, and applications. 
+                        <br><br> I'm currently an Entry-level Front-End Developer with experience in team-building environments, cross collaborations, and assignments requiring coherent communication and a strong attention to detail.
+                    </p>
+                </div>
+            </section>
+            <section class="skills">
+                <h2 class="skills-title" id="skills">Skills</h2>
+                <div class="skills-wrapper">
+                    <ul class="skills-wrapper-grid" id="skills-grid">
+                        <li class="skills-icon">
+                            <img src="skills-icons/html5-logo.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/css3-logo.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/python-logo.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/js.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/c.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/c++.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/react.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/expressjs.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/nodejs.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/sass.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/git.png">
+                        </li>
+                        <li class="skills-icon">
+                            <img src="skills-icons/photoshop.png">
+                        </li>
+                    </ul>
+                </div>  
+            </section>
+            <section class="projects" id="projects">
+                <h2 class="projects-title">Projects</h2>
+                <div class="projects-wrapper">
+                    <ul class="projects-wrapper-grid">
+                        <li class="projects-items" id="proj1">
+                            <a href="https://codepen.io/Errec/full/ZprVwZ/">
+                                <div class="main-work__img" id="work-img-1"></div>
+                                <span class="main-work__img-overlay"></span>
+                            </a>
+                        </li>
+                        <li class="projects-items" id="proj2"></li>
+                        <li class="projects-items" id="proj3"></li>
+                        <li class="projects-items" id="proj4"></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="contact-wrapper">
+                    <div class="contact-column">
+                        <h3 class="contact-title">Contact</h3>
+                        <form class="contact-form" method="post" onsubmit="sendEmail(); reset(); return false;">
+
+                            <input type="text" class="contact-form-input" id="contact-name" placeholder="Name" required/>
+                            <input type="email" class="contact-form-input" id="contact-email" placeholder="Email" required/>
+                            <textarea id="message" rows="4" placeholder="Enter a message here..."></textarea>
+                            <button class="contact-button" type="submit">Send</button>
+                        </form>
+                    
+                    </div>
+                        
+                </div>
+            </section>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    Email.send({
+                    secureToken: "cd2b69f8-c134-4c78-ba9a-433258e8013c",
+                    To : 'anaheimdaniel@gmail.com',
+                    From : "anaheimdaniel@gmail.com",
+                    Subject : "New Contact Form Enquiry",
+                    Body : "Name" +document.getElementById("contact-name").value
+                    + "<br> Email: " + document.getElementById("contact-email").value
+                    + "<br> Message: " + document.getElementById("message").value
+                }).then(
+                message => alert("Contact Sent Successfully")
+                );
+            }
+            </script>
+        </main>
+        <footer>
+            <a href="#navbar"><div class="return-home"></div></a>
+            <div class="socials">
+                <a href="https://github.com/ddaewonlee412" target="_blank">
+                    <div class="git-icon">
+                        <img src="/skills-icons/github.png">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/daewon.dl/" target="_blank">
+                    <div class="instagram-icon">
+                        <img src="/skills-icons/instagram.png">
+                    </div>
+                </a>
+                <a href="mailto:ddaewonlee@gmail.com" target="_blank">
+                    <div class="email-icon">
+                        <img src="/skills-icons/email.png">
+                    </div>
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
+
