@@ -40,7 +40,7 @@ h2, h3{
 }
 
 p{
-    color: #DDAF94;
+    color: #17252A;
     margin-bottom: 1.25rem;
     text-align:right;
 }
@@ -210,19 +210,26 @@ ul{
 .about-wrapper{
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     font-weight: 500;
-    left: -300px;
+}
+
+.about-area{
+    position: relative;
+    flex: 50%;
+    left: 10%;
 }
 
 .about-info{
-    color: #FDF8F5;
+    font-weight: 500;
+    color: #17252A;
     text-align: left;
     font-size: 1.8rem;
-    width: 500px;
+    width: 700px;
     line-height: 1.8;
-    margin-bottom: 10rem;
 }
 
 /*.underline2, h2, .about-info p{
@@ -233,10 +240,34 @@ ul{
 }
 */
 .underline2{
-    width: 33rem;
+    position: relative;
+    width: 44rem;
     height: 0.25rem;
     margin-bottom: 0.5rem;
     background: #2B7A78;
+}
+
+.profile-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    right: -300px;
+}
+.profile-border{
+    position: relative;
+    display: inline-block;
+    height: 600px;
+    width: 600px;
+    border-radius: 100%;
+    border: 8px solid #17252A;
+}
+
+.profile-border img{
+    border-radius: 50%;
+    height: 100%;
+    width:100%;
 }
 
 /*SKILLS SECTION*/
@@ -280,6 +311,7 @@ ul{
     }
   }
 /* PROJECTS SECTION */
+/*
 .projects{
     height: 100vh;
     display: flex;
@@ -299,7 +331,7 @@ ul{
     text-shadow: 20px 20px 22px rgba(0,0,0,0.2);
 }
 
-/*.projects-wrapper-grid{
+.projects-wrapper-grid{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -334,10 +366,17 @@ ul{
     border-radius: 12px;
     text-shadow: 20px 20px 22px rgba(0,0,0,0.2);
  }
-
- .contact-form{
-    min-height: 500px;
+ textarea{
+    resize: none;
+ }
+ .contact-form h2{
     position: relative;
+    top: -20%;
+    text-align: center;
+ }
+ /*.contact-form{
+    position: relative;
+    min-height: 500px;
     max-width: 500px;
     min-width: 300px;
     background-color: rgba(232,206,191, 0.06);
@@ -345,8 +384,8 @@ ul{
     border-radius: 50px;
     box-shadow: 0px 0px 22px rgba(0,0,0,0.2);
 }
+*/
 
-/*
 input, textarea, .contact-button{
     position: relative;
     top: 80%;
@@ -362,7 +401,7 @@ input, textarea, .contact-button{
     border-radius: 4px;
     opacity: 0.4;
 }
-*/
+
 .contact-button{
     font-size: 2rem;
     font-weight: bold;
@@ -422,6 +461,16 @@ footer{
     transition: all 0.2s;
 }
 
+.facebook-icon{
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
 .email-icon{
     margin-left: 1rem;
     display: flex;

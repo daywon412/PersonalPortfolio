@@ -16,7 +16,7 @@
                     <ul class="navbar-row">
                         <li class="navbar-list"><a href="#about">about</a></li>
                         <li class="navbar-list"><a href="#skills">skills</a></li>
-                        <li class="navbar-list"><a href="#projects">projects</a></li>
+                        <!--<li class="navbar-list"><a href="#projects">projects</a></li> -->
                         <li class="navbar-list"><a href="#contact">contact</a></li>
                     </ul>
             </nav>
@@ -33,10 +33,15 @@
             <section class="about-me" id="about">
                 <h2 class="about-heading">About</h2>
                 <div class= "about-wrapper">
-                    <div class="underline2"></div>
-                    <p class="about-info">Hi! My name is Daniel Daewon Lee, an undergraduate student at UCSD with a passion for learning/mastering new languages,frameworks, and applications. 
-                        <br><br> I'm currently an Entry-level Front-End Developer with experience in team-building environments, cross collaborations, and assignments requiring coherent communication and a strong attention to detail.
-                    </p>
+                    <div class="about-area">
+                        <div class="underline2"></div>
+                        <p class="about-info">Hi! My name is Daniel Daewon Lee, an undergraduate student at UCSD with a passion for learning/mastering new languages,frameworks, and applications. 
+                            <br><br> I'm currently an Entry-level Front-End Developer with experience in team-building environments, cross collaborations, and assignments requiring coherent communication and a strong attention to detail.
+                        </p>
+                    </div>
+                    <div class="about-area">
+                        <span class="profile-border"><img src="skills-icons/profile.jpg"></span>
+                    </div>
                 </div>
             </section>
             <section class="skills">
@@ -82,6 +87,7 @@
                     </ul>
                 </div>  
             </section>
+            <!--
             <section class="projects" id="projects">
                 <h2 class="projects-title">Projects</h2>
                 <div class="projects-wrapper">
@@ -97,13 +103,14 @@
                         <li class="projects-items" id="proj4"></li>
                     </ul>
                 </div>
+            -->
             </section>
             <section class="contact" id="contact">
                 <div class="contact-wrapper">
                     <div class="contact-column">
                         <h3 class="contact-title">Contact</h3>
                         <form class="contact-form" method="post" onsubmit="sendEmail(); reset(); return false;">
-
+                            <h2> Let's Get in Touch! </h2>
                             <input type="text" class="contact-form-input" id="contact-name" placeholder="Name" required/>
                             <input type="email" class="contact-form-input" id="contact-email" placeholder="Email" required/>
                             <textarea id="message" rows="4" placeholder="Enter a message here..."></textarea>
@@ -144,12 +151,18 @@
                         <img src="/skills-icons/instagram.png">
                     </div>
                 </a>
-                <a href="mailto:ddaewonlee@gmail.com" target="_blank">
+                <a href="https://www.facebook.com/daniel.lee.79069323" target="_blank">
+                    <div class="facebook-icon">
+                        <img src="/skills-icons/facebook.png">
+                    </div>
+                </a>
+                <a href="" target="_blank">
                     <div class="email-icon">
                         <img src="/skills-icons/email.png">
                     </div>
                 </a>
             </div>
+            <p>Made from sratch with HTML/CSS!</p>
         </footer>
     </body>
 </html>
